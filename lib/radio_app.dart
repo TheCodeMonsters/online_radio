@@ -10,7 +10,7 @@ class RadioApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final RadioPlayer radioPlayer = JustAudioPlayer();
     return MaterialApp(
-      title: 'Online Radio',
+      title: 'Radio Sandino',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: BlocProvider<PlayerBloc>(

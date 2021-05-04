@@ -7,9 +7,8 @@ import 'package:online_radio/widgets/idle_dots.dart';
 import 'player_bloc/player_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
-  final _planetRockUrl =
-      'https://usa4.fastcast4u.com/proxy/rocolamusical?mp=/1';
-  // final _planetRockUrl = 'https://stream-mz.planetradio.co.uk/planetrock.mp3';
+  // final _planetRockUrl = 'https://usa4.fastcast4u.com/proxy/rocolamusical?mp=/1';
+  final _planetRockUrl = 'https://stream-mz.planetradio.co.uk/planetrock.mp3';
   final _planetRockImage = 'assets/images/planet_rock.png';
 
   @override
