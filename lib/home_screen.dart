@@ -7,7 +7,9 @@ import 'package:online_radio/widgets/idle_dots.dart';
 import 'player_bloc/player_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
-  final _planetRockUrl = 'https://stream-mz.planetradio.co.uk/planetrock.mp3';
+  final _planetRockUrl =
+      'https://usa4.fastcast4u.com/proxy/rocolamusical?mp=/1';
+  // final _planetRockUrl = 'https://stream-mz.planetradio.co.uk/planetrock.mp3';
   final _planetRockImage = 'assets/images/planet_rock.png';
 
   @override
@@ -20,7 +22,8 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 100),
         child: Container(
           child: Center(
-            child: BlocBuilder<PlayerBloc, PlayerState>(builder: (context, state) {
+            child:
+                BlocBuilder<PlayerBloc, PlayerState>(builder: (context, state) {
               if (state is PausedState) {
                 return IdleDots(color: Theme.of(context).accentColor);
               } else if (state is PlayingState) {
@@ -66,7 +69,9 @@ class HomeScreen extends StatelessWidget {
                         size: 32,
                       ),
                       onPressed: () {
-                        context.bloc<PlayerBloc>().add(PlayEvent(url: _planetRockUrl));
+                        context
+                            .bloc<PlayerBloc>()
+                            .add(PlayEvent(url: _planetRockUrl));
                       },
                     );
                   } else {
